@@ -48,14 +48,14 @@ namespace Library
 
             set
             {
-                // Ensure name does not contain any numbers
-                if (!value.Any(char.IsDigit) && value != "")
+                // Ensure address is not blank
+                if (value != "")
                 {
                     address = value;
                 }
                 else
                 {
-                    Console.WriteLine("Error: Member address cannot be blank or contain numbers.");
+                    Console.WriteLine("Error: Member address cannot be blank.");
                 }
             }
         }

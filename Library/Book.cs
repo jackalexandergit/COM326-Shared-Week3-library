@@ -54,14 +54,14 @@ namespace Library
             get { return isbn; }
             set
             {
-                // Ensure isbn does not contain any numbers
-                if (!value.Any(char.IsDigit) && value != "")
+                // Ensure ISBN is a valid number and not blank
+                if (value.All(char.IsDigit) && value != "")
                 {
                     isbn = value;
                 }
                 else
                 {
-                    Console.WriteLine("Error: ISBN cannot be blank or contain numbers.");
+                    Console.WriteLine("Error: ISBN must be a valid number and cannot be blank.");
                 }
             }
         }
